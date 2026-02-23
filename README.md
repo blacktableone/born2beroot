@@ -126,7 +126,7 @@ signature.txt
 ```
 
 ### Resources
-- [Born2BeRoot guide sourced by gemartin99)]([https://42-cursus.gitbook.io/guide](https://noreply.gitbook.io/born2beroot))
+- [Born2BeRoot guide sourced by gemartin99)](https://42-cursus.gitbook.io/guide](https://noreply.gitbook.io/born2beroot))
 - [A general gitbook by Laura & Simon, from Switzerland (42 Lausanne)](https://42-cursus.gitbook.io/guide)
 
 ### AI Usage
