@@ -57,9 +57,18 @@ Defaults    secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin
  getent group sudo
  getent group user42
  sudo adduser <new_user>
+ sudo useradd <new_user>
+ sudo passwd <new_user>
+ sudo getent shadow <new_user> # check if user assed successful
  sudo groupadd <groupname>
  sudo usermod -aG <groupname> <username>
  groups <username>
+ su - <username> # change to newuser
+ exit # back older user
+ sudo deluser <username>
+ sudo deluser --remove-home <username> # full delete
+ sudo userdel -r -f <username> # force delete
+ sudo delgroup <group_name>
 ```
 
 ### Password policy
@@ -67,6 +76,8 @@ Defaults    secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin
 sudo chage -l <username>
 /etc/login.defs
 /etc/pam.d/common-password # using libpam-pwquality
+sudo passwd root # change root passwd
+passwd  # change personal passwd
 ```
 
 ### Hostname and partitions
@@ -75,6 +86,8 @@ hostnamectl
 sudo hostnamectl set-hostname <new_hostname>
 sudo reboot
 lsblk
+/etc/hostname
+
 ```
 
 ### Sudo
@@ -96,11 +109,11 @@ sudo ufw delete <number> # how to check number
 ```shell
 sudo service ssh status
 ssh <new_user>@local.host -p 4242
-sudo ufw delete <number> # how to check number
 ```
 ### Script Monitoring
 ```shell
 /usr/local/bin
+sudo sh /usr/local/bin/monitoring.sh # sh means shell
 sudo crontab -u root -e
 sudo systemctl stop cron
 sudo systemctl start cron
@@ -120,3 +133,4 @@ Claude (claude.ai) was used to:
 - Generate this `README.md` structure based on the project's README requirements.
 - Better understand the concept
 
+---
