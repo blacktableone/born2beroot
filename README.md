@@ -122,12 +122,13 @@ sudo systemctl start cron
 ```shell
 cd /sgoinfre/students/<your_intra_username>/<your_VM_name>
 shasum <your_VM_name>.vdi
+signature.txt
 ```
 
 ### Resources
 - [Born2BeRoot guide sourced by gemartin99)]([https://42-cursus.gitbook.io/guide](https://noreply.gitbook.io/born2beroot))
 - [A general gitbook by Laura & Simon, from Switzerland (42 Lausanne)](https://42-cursus.gitbook.io/guide)
-- 
+
 ### AI Usage
 Claude (claude.ai) was used to:
 - Generate this `README.md` structure based on the project's README requirements.
